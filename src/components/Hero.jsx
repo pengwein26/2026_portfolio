@@ -1,7 +1,7 @@
 // Figma 73:337 – 73:358. Desktop (lg+) keeps the exact Figma positions,
 // measured from the page center of the 1280px frame. Mobile stacks in flow.
 // Nav occupies the first ~94px, so hero tops below are Figma top − 94.
-const A = "/assets";
+const A = `${import.meta.env.BASE_URL}assets`;
 
 export default function Hero() {
   return (

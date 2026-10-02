@@ -1,7 +1,7 @@
 // Thumbnail compositions from Figma. The original frame is 567×301px.
 // Every px value is converted to cqw (px ÷ 5.67) so each composition
 // scales as one unit at any card width while keeping exact proportions.
-const A = "/assets";
+const A = `${import.meta.env.BASE_URL}assets`;
 
 const Frame = ({ bg, children }) => (
   <div
