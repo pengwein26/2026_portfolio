@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+/* Design tokens pulled from the Figma file */
+@theme {
+  --color-orange: #f5491a;   /* Figma style: Orange */
+  --color-yellow: #ffaa11;   /* Figma style: Yellow */
+  --color-ink: #000000;
+  --color-muted: #898989;    /* project descriptions */
+  --color-subtle: #4e4846;   /* "previously @" line */
+
+  /* LiHei Pro is a macOS system font — not available on the web.
+     Swap in a licensed webfont here if you want it everywhere. */
+  --font-display: "LiHei Pro", "PingFang TC", "Instrument Sans", system-ui, sans-serif;
+  --font-nav: "Instrument Sans", system-ui, sans-serif;
+  --font-body: "Karla", system-ui, sans-serif;
+}
+
+body {
+  background: #fff;
+  color: var(--color-ink);
+}
+
+/* Orange dot replaces the system pointer. The `*` rule is needed so links,
+   buttons and text runs don't fall back to their own cursors. */
+html,
+* {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18'%3E%3Ccircle cx='9' cy='9' r='6' fill='%23f5491a'/%3E%3C/svg%3E") 9 9, auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}
