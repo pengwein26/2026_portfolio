@@ -5,7 +5,7 @@ const A = `${import.meta.env.BASE_URL}assets`;
 
 const Frame = ({ bg, children }) => (
   <div
-    className="relative aspect-[567/301] w-full overflow-clip"
+    className="cursor-dot-white relative aspect-[567/301] w-full overflow-clip"
     style={{ backgroundColor: bg, containerType: "inline-size" }}
   >
     {children}

@@ -24,8 +24,10 @@ function ProjectCard({ project }) {
     >
       <Thumb />
       <div className="flex flex-col gap-3">
-        <h2 className="font-display text-[20px] leading-[0.9] text-ink lg:text-[24px]">{project.title}</h2>
-        <p className="font-body text-[16px] leading-[1.15] text-muted lg:text-[20px] lg:leading-none">
+        <h2 className="font-display text-[20px] leading-[0.9] text-ink transition-colors duration-200 group-hover:text-orange lg:text-[24px]">
+          {project.title}
+        </h2>
+        <p className="font-body text-[16px] leading-[1.15] text-muted transition-colors duration-200 group-hover:text-orange lg:text-[20px] lg:leading-none">
           {project.description}
         </p>
       </div>
