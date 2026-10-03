@@ -4,7 +4,8 @@ import { useEffect, useRef } from "react";
 // carries fixed jitter offsets so the stroke stays still instead of shimmering,
 // and two offset passes give it the doubled-back look of a pencil outline.
 const LIFETIME = 520; // ms before a point has fully faded
-const MAX_POINTS = 70;
+const MAX_POINTS = 48;
+const PAD = 8; // covers jitter + stroke width when clearing
 const PASSES = [
   { spread: 1.1, width: 1.5, alpha: 0.55 },
   { spread: 2.2, width: 0.9, alpha: 0.3 },
@@ -25,12 +26,15 @@ export default function CursorTrail() {
     const ctx = canvas.getContext("2d");
     const points = [];
     let frame = 0;
+    let running = false;
+    let painted = null; // region touched last frame, so we only clear that much
 
     const resize = () => {
       const dpr = window.devicePixelRatio || 1;
       canvas.width = window.innerWidth * dpr;
       canvas.height = window.innerHeight * dpr;
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      painted = null; // resizing clears the bitmap
     };
 
     const onMove = (e) => {
@@ -44,16 +48,36 @@ export default function CursorTrail() {
         })),
       });
       if (points.length > MAX_POINTS) points.shift();
+      start();
     };
 
     const onLeave = () => {
       points.length = 0;
+      start(); // one more frame to wipe the tail, then the loop halts itself
     };
 
     const render = () => {
       const now = performance.now();
       while (points.length && now - points[0].t > LIFETIME) points.shift();
-      ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+
+      if (painted) ctx.clearRect(painted.x, painted.y, painted.w, painted.h);
+
+      // Once the tail has expired there is nothing to animate, so let the loop
+      // stop instead of clearing a full-viewport canvas 60 times a second.
+      if (points.length < 2) {
+        painted = null;
+        running = false;
+        return;
+      }
+
+      let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
+      for (const pt of points) {
+        if (pt.x < minX) minX = pt.x;
+        if (pt.y < minY) minY = pt.y;
+        if (pt.x > maxX) maxX = pt.x;
+        if (pt.y > maxY) maxY = pt.y;
+      }
+      painted = { x: minX - PAD, y: minY - PAD, w: maxX - minX + PAD * 2, h: maxY - minY + PAD * 2 };
 
       ctx.lineCap = "round";
       ctx.lineJoin = "round";
@@ -76,8 +100,13 @@ export default function CursorTrail() {
       frame = requestAnimationFrame(render);
     };
 
+    function start() {
+      if (running) return;
+      running = true;
+      frame = requestAnimationFrame(render);
+    }
+
     resize();
-    frame = requestAnimationFrame(render);
     window.addEventListener("resize", resize);
     window.addEventListener("mousemove", onMove, { passive: true });
     document.addEventListener("mouseleave", onLeave);

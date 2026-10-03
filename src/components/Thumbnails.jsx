@@ -13,7 +13,14 @@ const Frame = ({ bg, children }) => (
 );
 
 const Img = ({ src, className = "", style }) => (
-  <img src={`${A}/${src}`} alt="" className={`absolute max-w-none ${className}`} style={style} />
+  <img
+    src={`${A}/${src}`}
+    alt=""
+    loading="lazy"
+    decoding="async"
+    className={`absolute max-w-none ${className}`}
+    style={style}
+  />
 );
 
 export const thumbnails = {
