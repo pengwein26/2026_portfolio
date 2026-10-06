@@ -22,6 +22,7 @@
   --font-display: "LiHei Pro", "PingFang TC", "Instrument Sans", system-ui, sans-serif;
   --font-nav: "Instrument Sans", system-ui, sans-serif;
   --font-body: "Karla", system-ui, sans-serif;
+  --font-bubble: "Inter", system-ui, sans-serif;
 }
 
 body {
@@ -70,4 +71,36 @@ html,
 .footer-pill:focus-visible {
   background-color: var(--color-lime);
   color: var(--color-ink);
+}
+
+@keyframes fav-wiggle {
+  0%   { transform: rotate(var(--r)) scale(1.2); }
+  30%  { transform: rotate(calc(var(--r) - 5deg)) scale(1.2); }
+  70%  { transform: rotate(calc(var(--r) + 5deg)) scale(1.2); }
+  100% { transform: rotate(var(--r)) scale(1.2); }
+}
+
+.fav-item {
+  --r: 0deg;
+  transform: rotate(var(--r));
+  transform-origin: center;
+}
+
+.fav-item:hover,
+.fav-item.is-hot,
+.fav-item:focus-visible {
+  z-index: 20;
+  animation: fav-wiggle 0.5s ease-in-out 1 forwards;
+}
+
+.fav-bubble {
+  opacity: 0;
+  transform: translateX(-50%) translateY(8px) scale(0.92);
+  transform-origin: bottom center;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+.fav-bubble.is-open {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0) scale(1);
 }
