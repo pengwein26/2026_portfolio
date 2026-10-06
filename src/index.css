@@ -43,12 +43,12 @@ html,
 }
 
 @keyframes nav-wiggle {
-  /* One wavelength of the 12-segment path (10/120 of the viewBox). */
+  from { transform: translateX(0); }
   to { transform: translateX(calc(-100% / 12)); }
 }
 
 .nav-wiggle {
-  animation: nav-wiggle 0.45s linear infinite;
+  animation: nav-wiggle 0.55s linear infinite alternate;
 }
 
 @media (prefers-reduced-motion: reduce) {
