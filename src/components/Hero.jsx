@@ -47,11 +47,11 @@ export default function Hero() {
       </div>
       {/* 73:352 */}
       <div className="absolute hidden h-[53.593px] w-[49.157px] lg:left-[calc(50%+426px)] lg:top-[357px] lg:block">
-        <div className="absolute inset-[-1.81%_-2.08%_-2.02%_-2.31%]"><img src={`${A}/doodle-right-1.svg`} alt="" aria-hidden className="block size-full max-w-none" /></div>
+        <div className="absolute inset-[-1.81%_-2.08%_-2.02%_-2.31%]"><img src={`${A}/doodle-right-1.png`} alt="" aria-hidden className="block size-full max-w-none" /></div>
       </div>
       {/* 73:353 */}
       <div className="absolute hidden h-[41.268px] w-[27.143px] lg:left-[calc(50%+375px)] lg:top-[398px] lg:block">
-        <div className="absolute inset-[-2.28%_-4.14%_-2.08%_-3.27%]"><img src={`${A}/doodle-right-2.svg`} alt="" aria-hidden className="block size-full max-w-none" /></div>
+        <div className="absolute inset-[-2.28%_-4.14%_-2.08%_-3.27%]"><img src={`${A}/doodle-right-2.png`} alt="" aria-hidden className="block size-full max-w-none" /></div>
       </div>
       {/* 73:354 — flipped horizontally */}
       <div className="absolute hidden h-[32.3px] w-[48.5px] -scale-x-100 rotate-[0.22deg] lg:left-[calc(50%-163px)] lg:top-[238px] lg:block">

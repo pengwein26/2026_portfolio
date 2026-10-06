@@ -16,8 +16,6 @@ const assets = {
   "cg-home.png": "37c2bbc6-b886-42a6-8348-8ac109e7ce41.png",
   "cg-leaderboard.png": "41769718-840b-4411-976d-92df4f19906a.png",
   "logo-mark.svg": "83bff28e-f1e8-40b3-bf64-0016bfc4cf8a.svg",      // 73:337
-  "doodle-right-1.svg": "df2feb87-3a6c-46e0-96b3-fff51c8c4cff.svg",   // 73:352
-  "doodle-right-2.svg": "3edcfeb1-7d3d-44d6-a0ca-27e88387f0dc.svg",   // 73:353
   "doodle-top.svg": "095ae7d2-39dc-44f8-bd7c-b50aaf9e4513.svg",       // 73:354
   "dots.svg": "e89cdbf4-407b-4ef2-91d1-049fa26603dd.svg",             // 73:358
 };
