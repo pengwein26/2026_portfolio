@@ -10,7 +10,7 @@ export default function Nav({ current = "Projects", projectsHref = "#projects" }
   ];
 
   return (
-    <nav className="flex justify-center gap-10 pt-10 font-nav text-[20px] leading-[0.9] lg:gap-[70px] lg:pt-[72px] lg:text-[24px]">
+    <nav className="sticky top-0 z-50 flex justify-center gap-10 bg-white pb-4 pt-10 font-nav text-[20px] leading-[0.9] lg:gap-[70px] lg:pt-[72px] lg:text-[24px]">
       {links.map((l) => (
         <a
           key={l.label}
