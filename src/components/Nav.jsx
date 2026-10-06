@@ -1,9 +1,9 @@
 // Figma 73:334 / 12:28 — centered, 70px gap, 24px Instrument Sans, top 72px
-export default function Nav({ current = "Projects" }) {
+export default function Nav({ current = "Projects", projectsHref = "#projects" }) {
   const links = [
     {
       label: "Projects",
-      href: current === "Projects" ? "#projects" : "/",
+      href: current === "Projects" ? projectsHref : "/",
       current: current === "Projects",
     },
     { label: "About", href: "/about", current: current === "About" },

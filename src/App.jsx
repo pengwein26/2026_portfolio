@@ -3,25 +3,39 @@ import Nav from "./components/Nav.jsx";
 import Hero from "./components/Hero.jsx";
 import ProjectGrid from "./components/ProjectGrid.jsx";
 import About from "./components/About.jsx";
+import JWPermissions from "./components/JWPermissions.jsx";
 
-function isAboutPath() {
+function pageFromPath() {
   const path = window.location.pathname.replace(/\/+$/, "") || "/";
-  return path === "/about";
+  if (path === "/about") return "about";
+  if (path === "/projects/jw-permissions") return "jw-permissions";
+  return "home";
 }
 
+const titles = {
+  home: "Uyen Phan — Product Designer",
+  about: "About — Uyen Phan",
+  "jw-permissions": "Editing Permissions @ Justworks — Uyen Phan",
+};
+
 export default function App() {
-  const about = isAboutPath();
+  const page = pageFromPath();
 
   useEffect(() => {
-    document.title = about ? "About — Uyen Phan" : "Uyen Phan — Product Designer";
-  }, [about]);
+    document.title = titles[page];
+  }, [page]);
 
   return (
     <>
       <main className="relative mx-auto max-w-[1280px]">
-        <Nav current={about ? "About" : "Projects"} />
-        {about ? (
+        <Nav
+          current={page === "about" ? "About" : "Projects"}
+          projectsHref={page === "home" ? "#projects" : "/"}
+        />
+        {page === "about" ? (
           <About />
+        ) : page === "jw-permissions" ? (
+          <JWPermissions />
         ) : (
           <>
             <Hero />

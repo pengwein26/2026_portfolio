@@ -21,7 +21,7 @@ export const projects = [
     title: "Editing Permissions @ Justworks",
     description:
       "Integrated editing feature for both internal and external use, built around specific use cases and editing permissions.",
-    href: "#",
+    href: "/projects/jw-permissions",
     thumb: "jwPermissions",
   },
   {

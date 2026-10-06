@@ -7,6 +7,11 @@
   --color-ink: #000000;
   --color-muted: #898989;    /* project descriptions */
   --color-subtle: #4e4846;   /* "previously @" line */
+  --color-jw: #168aec;       /* Justworks highlight */
+  --color-wash: #f5f7f9;     /* case-study bands */
+  --color-label: #b0b0b0;
+  --color-meta: #797979;
+  --color-copy: #3a3a3a;
 
   /* LiHei Pro is a macOS system font — not available on the web.
      Swap in a licensed webfont here if you want it everywhere. */
