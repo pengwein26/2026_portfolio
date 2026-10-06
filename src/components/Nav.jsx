@@ -23,12 +23,12 @@ export default function Nav({ current = "Projects" }) {
           {l.label}
           <span
             aria-hidden
-            className={`pointer-events-none absolute inset-x-[-2px] -bottom-2 h-[7px] overflow-hidden text-orange ${
+            className={`pointer-events-none absolute inset-x-[-2px] -bottom-3 h-[10px] text-orange ${
               l.current ? "opacity-100" : "opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100"
             }`}
           >
             <svg
-              className="nav-wiggle h-full w-[200%]"
+              className="nav-wiggle h-full w-full"
               viewBox="0 0 120 8"
               preserveAspectRatio="none"
             >
