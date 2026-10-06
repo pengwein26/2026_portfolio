@@ -43,7 +43,7 @@ export default function Hero() {
       {/* Doodles — desktop only */}
       {/* 73:351 star, left */}
       <div className="absolute hidden h-[63.133px] w-[59.067px] lg:left-[calc(50%-453px)] lg:top-[226px] lg:block">
-        <div className="absolute inset-[-1.52%_-1.64%_-1.74%_-1.75%]"><img src={`${A}/doodle-star-left.svg`} alt="" aria-hidden className="block size-full max-w-none" /></div>
+        <div className="absolute inset-[-1.52%_-1.64%_-1.74%_-1.75%]"><img src={`${A}/doodle-star-left.png`} alt="" aria-hidden className="block size-full max-w-none" /></div>
       </div>
       {/* 73:352 */}
       <div className="absolute hidden h-[53.593px] w-[49.157px] lg:left-[calc(50%+426px)] lg:top-[357px] lg:block">
