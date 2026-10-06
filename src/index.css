@@ -43,13 +43,12 @@ html,
 }
 
 @keyframes nav-wiggle {
-  0%, 100% { transform: translateY(0); }
-  40% { transform: translateY(-3px); }
-  60% { transform: translateY(-1px); }
+  0%, 100% { transform: translateX(-4px); }
+  50% { transform: translateX(4px); }
 }
 
 .nav-wiggle {
-  animation: nav-wiggle 0.7s ease-in-out infinite;
+  animation: nav-wiggle 0.8s ease-in-out infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
