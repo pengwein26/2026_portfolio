@@ -26,7 +26,7 @@ export default function JWPermissions() {
   return (
     <article>
       {/* Hero — Figma 35:135 */}
-      <div className="relative h-[240px] overflow-hidden bg-black sm:h-[320px] lg:h-[439px]">
+      <div className="relative mt-8 h-[240px] overflow-hidden bg-black sm:h-[320px] lg:h-[439px]">
         <img
           src={`${A}/jw-logo.png`}
           alt="Justworks"
