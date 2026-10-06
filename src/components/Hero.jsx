@@ -10,7 +10,7 @@ export default function Hero() {
       <div className="relative z-10 mx-auto flex max-w-[740px] flex-col items-center gap-6 text-center font-display leading-[0.9] lg:absolute lg:left-1/2 lg:top-[189px] lg:w-[740px] lg:-translate-x-1/2">
         <p className="text-[16px] text-subtle lg:text-[18.379px]">previously @ tinder, justworks</p>
         <h1 className="text-[30px] text-ink sm:text-[36px] lg:text-[40.966px]">
-          Hi, I am Uyen. A designer who make products feel more human and the people behind them feel seen.
+          Uyen is a designer who make products feel more human and the people behind them feel seen.
         </h1>
       </div>
 

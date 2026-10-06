@@ -1,9 +1,13 @@
 @import "tailwindcss";
 
-/* Design tokens pulled from the Figma file */
+/* Cursor’s preview (and some touch laptops) report hover:none, so Tailwind’s
+   default hover variant never fires. Bind hover to :hover only. */
+@custom-variant hover (&:hover);
 @theme {
   --color-orange: #f5491a;   /* Figma style: Orange */
   --color-yellow: #ffaa11;   /* Figma style: Yellow */
+  --color-cream: #fae0be;    /* footer type + pills */
+  --color-lime: #a9df65;     /* footer pill hover */
   --color-ink: #000000;
   --color-muted: #898989;    /* project descriptions */
   --color-subtle: #4e4846;   /* "previously @" line */
@@ -58,4 +62,12 @@ html,
 
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; }
+}
+
+/* Footer pills — unlayered so :hover always wins over utility classes,
+   including in previews that skip Tailwind’s hover media query. */
+.footer-pill:hover,
+.footer-pill:focus-visible {
+  background-color: var(--color-lime);
+  color: var(--color-ink);
 }

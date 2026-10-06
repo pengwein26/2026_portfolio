@@ -4,6 +4,7 @@ import Hero from "./components/Hero.jsx";
 import ProjectGrid from "./components/ProjectGrid.jsx";
 import About from "./components/About.jsx";
 import JWPermissions from "./components/JWPermissions.jsx";
+import Footer from "./components/Footer.jsx";
 
 function pageFromPath() {
   const path = window.location.pathname.replace(/\/+$/, "") || "/";
@@ -43,6 +44,8 @@ export default function App() {
           </>
         )}
       </main>
+      <Footer />
     </>
   );
 }
+
