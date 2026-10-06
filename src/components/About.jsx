@@ -24,7 +24,7 @@ export default function About() {
               src={`${A}/about-flower.svg`}
               alt=""
               aria-hidden
-              className="mt-0.5 h-[40px] w-[40px] shrink-0 lg:h-[49.589px] lg:w-[50.072px]"
+              className="spin-slow mt-0.5 h-[40px] w-[40px] shrink-0 lg:h-[49.589px] lg:w-[50.072px]"
             />
           </div>
 
