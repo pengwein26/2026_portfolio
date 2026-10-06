@@ -3,7 +3,6 @@ import Nav from "./components/Nav.jsx";
 import Hero from "./components/Hero.jsx";
 import ProjectGrid from "./components/ProjectGrid.jsx";
 import About from "./components/About.jsx";
-import CursorTrail from "./components/CursorTrail.jsx";
 
 function isAboutPath() {
   const path = window.location.pathname.replace(/\/+$/, "") || "/";
@@ -30,7 +29,6 @@ export default function App() {
           </>
         )}
       </main>
-      <CursorTrail />
     </>
   );
 }

@@ -42,6 +42,15 @@ html,
   animation: spin-slow 8s linear infinite;
 }
 
+@keyframes nav-wiggle {
+  /* One wavelength of the 12-segment path (10/120 of the viewBox). */
+  to { transform: translateX(calc(-100% / 12)); }
+}
+
+.nav-wiggle {
+  animation: nav-wiggle 0.55s linear infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; }
 }
