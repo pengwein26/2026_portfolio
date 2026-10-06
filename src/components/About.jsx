@@ -21,7 +21,7 @@ export default function About() {
               Hi, I’m Uyen :)
             </h1>
             <img
-              src={`${A}/about-flower.svg`}
+              src={`${A}/about-flower.png`}
               alt=""
               aria-hidden
               className="spin-slow mt-0.5 h-[40px] w-[40px] shrink-0 lg:h-[49.589px] lg:w-[50.072px]"
