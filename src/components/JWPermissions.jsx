@@ -22,6 +22,48 @@ function Title({ children }) {
   );
 }
 
+function Walkthrough({ label, src, alt, notes, crop }) {
+  return (
+    <div className="flex w-full flex-col gap-4">
+      <p className="font-body text-[18px] font-medium leading-normal text-label">{label}</p>
+      <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:gap-0">
+        <div className="relative w-full overflow-hidden shadow-[0_2px_2px_rgba(0,0,0,0.25)] lg:w-[74.3%]">
+          <img
+            src={src}
+            alt={alt}
+            className={
+              crop
+                ? "absolute left-0 w-full max-w-none"
+                : "block h-auto w-full"
+            }
+            style={
+              crop
+                ? { height: crop.h, top: crop.t }
+                : undefined
+            }
+          />
+          {crop ? <div className="aspect-[682/443] w-full" /> : null}
+        </div>
+        <div className="hidden w-[5.2%] pt-[14%] lg:block">
+          <div className="h-px w-full bg-[#cfcfcf]" />
+        </div>
+        <div className="flex flex-col gap-10 lg:w-[19.1%] lg:gap-16 lg:pt-12">
+          {notes.map((n) => (
+            <div key={n.title} className="flex max-w-[175px] flex-col gap-2">
+              <p className="font-body text-[15px] font-medium leading-normal tracking-[-0.3px] text-[#888]">
+                {n.title}
+              </p>
+              <p className="font-body text-[11.5px] leading-[23px] tracking-[-0.15px] text-[#737373]">
+                {n.body}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function JWPermissions() {
   return (
     <article>
@@ -94,7 +136,7 @@ export default function JWPermissions() {
         </div>
       </Section>
 
-      {/* What I did */}
+      {/* What I did — Figma 77:1272 */}
       <Section wash>
         <div className="flex flex-col gap-8 lg:gap-[40px]">
           <div className="flex flex-col gap-3">
@@ -105,16 +147,88 @@ export default function JWPermissions() {
             </Title>
           </div>
           <div className="flex flex-col gap-12 lg:gap-[84px]">
-            <Screen
-              label="Admins (customer facing) editing view"
-              src={`${A}/jw-sui-admin.png`}
-              alt="Admin-facing unemployment claim editing screen"
-            />
-            <Screen
-              label="Customer Support internal editing view"
-              src={`${A}/jw-sui-internal.png`}
-              alt="Customer Support internal claim editing screen"
-            />
+            <div className="flex flex-col gap-4">
+              <Walkthrough
+                label="Entry point"
+                src={`${A}/jw-sui-entry.gif`}
+                alt="Employee profile with pending unemployment claim status"
+                notes={[
+                  {
+                    title: "STATUS BADGE",
+                    body: "Visual cues for those who are “pending” versus “terminated”",
+                  },
+                  {
+                    title: "ENTRY POINT",
+                    body: "Accessing form through a card - reflective of the current design system on the EE’s profile page",
+                  },
+                ]}
+              />
+              <Walkthrough
+                label="Overall view"
+                src={`${A}/jw-sui-preview.gif`}
+                alt="Unemployment claim preview page"
+                notes={[
+                  {
+                    title: "PREVIEW PAGE",
+                    body: "View the previous submitted form. Users can choose to view information, or edit each sections",
+                  },
+                  {
+                    title: "SECTIONS",
+                    body: "The form is divided up by details info, background info, and payments",
+                  },
+                ]}
+              />
+              <Walkthrough
+                label="Step 1: Details edit"
+                src={`${A}/jw-sui-details.gif`}
+                alt="Editing claim details including separation reason"
+                notes={[
+                  {
+                    title: "SEPARATION REASON & TYPE",
+                    body: "Changing these will dynamically change the questions that come after.",
+                  },
+                  {
+                    title: "BANNER",
+                    body: "Letting users know they will have to fill out a new set of questions",
+                  },
+                ]}
+              />
+              <Walkthrough
+                label="Step 2: Background edits"
+                src={`${A}/jw-sui-background.gif`}
+                alt="Background edit screen with exit confirmation modal"
+                notes={[
+                  {
+                    title: "EXIT MODEL",
+                    body: "A confirmation modal appears when users attempt to leave the page to ensure they are certain about their decision.",
+                  },
+                ]}
+              />
+              <Walkthrough
+                label="Step 3: Payments edits"
+                src={`${A}/jw-sui-payments.gif`}
+                alt="Payments section with disabled fields"
+                crop={{ h: "104.84%", t: "-2.03%" }}
+                notes={[
+                  {
+                    title: "PAYMENTS ARE DISABLED",
+                    body: "Editing payments will lead users to the Payment Center where they can make edits there",
+                  },
+                ]}
+              />
+            </div>
+            <div className="flex w-full flex-col gap-4">
+              <p className="font-body text-[18px] font-medium leading-normal text-label">
+                Customer Support internal editing view
+              </p>
+              <div className="relative h-[240px] overflow-hidden rounded-xl border border-[#cecece] bg-[#e3e3e3] sm:h-[320px] lg:h-[417px]">
+                <img
+                  src={`${A}/jw-sui-internal.gif`}
+                  alt="Customer Support internal claim editing screen"
+                  className="absolute left-0 top-0 w-full object-cover object-top"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </Section>
@@ -198,17 +312,6 @@ function Meta({ label, value, wide }) {
     <div className={`flex flex-col gap-1 ${wide ? "sm:min-w-[240px] lg:w-[352px]" : ""}`}>
       <p className="font-body text-[15px] leading-normal">{label}</p>
       <p className="font-display text-[18px] leading-[0.9] lg:text-[20px]">{value}</p>
-    </div>
-  );
-}
-
-function Screen({ label, src, alt }) {
-  return (
-    <div className="flex w-full flex-col gap-4">
-      <p className="font-body text-[18px] font-medium leading-normal text-label">{label}</p>
-      <div className="relative h-[240px] overflow-hidden rounded-xl border border-[#cecece] bg-[#e3e3e3] sm:h-[320px] lg:h-[417px]">
-        <img src={src} alt={alt} className="absolute left-0 top-0 w-full object-cover object-top" />
-      </div>
     </div>
   );
 }

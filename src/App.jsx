@@ -4,12 +4,16 @@ import Hero from "./components/Hero.jsx";
 import ProjectGrid from "./components/ProjectGrid.jsx";
 import About from "./components/About.jsx";
 import JWPermissions from "./components/JWPermissions.jsx";
+import JWDirectory from "./components/JWDirectory.jsx";
+import Pinterest from "./components/Pinterest.jsx";
 import Footer from "./components/Footer.jsx";
 
 function pageFromPath() {
   const path = window.location.pathname.replace(/\/+$/, "") || "/";
   if (path === "/about") return "about";
   if (path === "/projects/jw-permissions") return "jw-permissions";
+  if (path === "/projects/jw-directory") return "jw-directory";
+  if (path === "/projects/pinterest") return "pinterest";
   return "home";
 }
 
@@ -17,6 +21,8 @@ const titles = {
   home: "Uyen Phan — Product Designer",
   about: "About — Uyen Phan",
   "jw-permissions": "Editing Permissions @ Justworks — Uyen Phan",
+  "jw-directory": "Mobile Directory @ Justworks — Uyen Phan",
+  pinterest: "Ad Creation Flow @ Pinterest — Uyen Phan",
 };
 
 export default function App() {
@@ -37,6 +43,10 @@ export default function App() {
           <About />
         ) : page === "jw-permissions" ? (
           <JWPermissions />
+        ) : page === "jw-directory" ? (
+          <JWDirectory />
+        ) : page === "pinterest" ? (
+          <Pinterest />
         ) : (
           <>
             <Hero />

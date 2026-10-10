@@ -29,7 +29,7 @@ export const projects = [
     title: "Mobile Directory @ Justworks",
     description:
       "Shipped a mobile directory, streamlining access to important information for over 1000 companies and their employees.",
-    href: "#",
+    href: "/projects/jw-directory",
     thumb: "jwDirectory",
   },
   {
@@ -37,7 +37,7 @@ export const projects = [
     title: "Ad Creation Flow @ Pinterest",
     description:
       "Improving Pinterest’s “quick promote” feature; dedicating an ad creation flow for small-medium businesses (SMBs).",
-    href: "#",
+    href: "/projects/pinterest",
     thumb: "pinterest",
   },
   {
