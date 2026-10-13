@@ -45,7 +45,7 @@ export const projects = [
     title: "Community & Sustainability Building @ CG",
     description:
       "Worked with an early startup, Design mobile features to increase accountability and foster community engagement.",
-    href: "#",
+    href: "/projects/cg",
     thumb: "cg",
   },
 ];
