@@ -173,6 +173,14 @@ export default function Tinder() {
             className="mx-auto h-auto w-full max-w-[360px] object-contain"
           />
           <Demo src={`${A}/tinder-guided.png`} alt="Guided photo refining and insights" />
+          <Point label="Encourage self-learning">
+            Investigated ways to help users understand how their profile might come across to
+            potential matches.
+          </Point>
+          <Demo
+            src={`${A}/tinder-self-learning.png`}
+            alt="Weekly glance insights next to a Tinder profile with My Insights"
+          />
           <Point label="Simplifying editing flow">
             The current editing flow takes 5 clicks and does not provide guidance.
           </Point>
