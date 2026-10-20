@@ -7,6 +7,7 @@ import JWPermissions from "./components/JWPermissions.jsx";
 import JWDirectory from "./components/JWDirectory.jsx";
 import Pinterest from "./components/Pinterest.jsx";
 import CommunityGearbox from "./components/CommunityGearbox.jsx";
+import Tinder from "./components/Tinder.jsx";
 import Footer from "./components/Footer.jsx";
 
 function pageFromPath() {
@@ -16,6 +17,7 @@ function pageFromPath() {
   if (path === "/projects/jw-directory") return "jw-directory";
   if (path === "/projects/pinterest") return "pinterest";
   if (path === "/projects/cg") return "cg";
+  if (path === "/projects/tinder") return "tinder";
   return "home";
 }
 
@@ -26,6 +28,7 @@ const titles = {
   "jw-directory": "Mobile Directory @ Justworks — Uyen Phan",
   pinterest: "Ad Creation Flow @ Pinterest — Uyen Phan",
   cg: "Community & Sustainability Building @ CG — Uyen Phan",
+  tinder: "Profile Building @ Tinder — Uyen Phan",
 };
 
 export default function App() {
@@ -52,6 +55,8 @@ export default function App() {
           <Pinterest />
         ) : page === "cg" ? (
           <CommunityGearbox />
+        ) : page === "tinder" ? (
+          <Tinder />
         ) : (
           <>
             <Hero />

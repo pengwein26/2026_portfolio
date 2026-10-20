@@ -5,7 +5,7 @@ export const projects = [
     title: "Profile Building @ Tinder",
     description:
       "Designed Tinder’s AI-powered profile builder, integrating photo analysis into the app’s ecosystem and design system.",
-    href: "#",
+    href: "/projects/tinder",
     thumb: "tinder",
   },
   {
