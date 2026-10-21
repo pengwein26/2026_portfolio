@@ -24,18 +24,41 @@ const Img = ({ src, className = "", style }) => (
 );
 
 export const thumbnails = {
-  // 73:381
+  // 16:5388
   tinder: () => (
-    <Frame bg="#bac4ca">
-      <Img src="tinder-1.png" className="object-cover" style={{ left: "21.16cqw", top: "-10.23cqw", width: "26.96cqw", height: "60.42cqw" }} />
-      <Img src="tinder-2.png" className="object-cover" style={{ left: "51.68cqw", top: "3.35cqw", width: "27.03cqw", height: "60.49cqw" }} />
+    <Frame bg="#252525">
+      <Img src="tinder-card.gif" className="inset-0 size-full object-cover" />
     </Frame>
   ),
 
-  // 73:389
+  // 16:5394
   pact: () => (
     <Frame bg="#c5c5c5">
-      <Img src="pact.png" className="left-0 w-full object-cover" style={{ top: "-8.11cqw", height: "66.65cqw" }} />
+      <div
+        className="absolute flex items-center justify-center"
+        style={{ left: "-1.23cqw", top: "-25.4cqw", width: "101.45cqw", height: "81.16cqw" }}
+      >
+        <div className="h-[101.45cqw] w-[81.16cqw] flex-none rotate-90">
+          <img
+            src={`${A}/pact-hero-forest.png`}
+            alt=""
+            loading="lazy"
+            decoding="async"
+            className="h-full w-full object-cover blur-[1px]"
+          />
+        </div>
+      </div>
+      <Img
+        src="pact-phone-1.gif"
+        className="object-cover"
+        style={{
+          left: "35.1cqw",
+          top: "3.7cqw",
+          width: "28.52cqw",
+          height: "57.14cqw",
+          borderRadius: "4.29cqw",
+        }}
+      />
     </Frame>
   ),
 

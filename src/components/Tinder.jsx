@@ -82,7 +82,7 @@ export default function Tinder() {
               value="ASL (Art & Science Lab), Innovation @ Match Group, Profile @ Tinder"
               wide
             />
-            <Meta label="TIMELINE" value="2026" />
+            <Meta label="TIMELINE" value="2025" />
           </div>
           <div className="flex flex-col items-start justify-between gap-10 lg:flex-row">
             <div className="flex w-[196px] flex-col gap-2">
@@ -192,8 +192,8 @@ export default function Tinder() {
         <div className="flex flex-col gap-8 lg:gap-[40px]">
           <Title>Reimagined Social Dating Experiences</Title>
           <Point label="Explored ways to make dating feel more social">
-            rainstormed ideas alongside the Double Date beta, including a Blind Date concept where
-            friends could curate potential matches for a user's swipe stack.
+            Brainstormed ideas alongside the Double Date beta, including a Blind Date concept where
+            friends could find potential matches for a friend's swipe stack.
           </Point>
           <Demo src={`${A}/tinder-social.png`} alt="Blind Date concept across three phones" />
         </div>

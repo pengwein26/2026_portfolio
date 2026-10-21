@@ -8,6 +8,7 @@ import JWDirectory from "./components/JWDirectory.jsx";
 import Pinterest from "./components/Pinterest.jsx";
 import CommunityGearbox from "./components/CommunityGearbox.jsx";
 import Tinder from "./components/Tinder.jsx";
+import Pact from "./components/Pact.jsx";
 import Footer from "./components/Footer.jsx";
 
 function pageFromPath() {
@@ -18,6 +19,7 @@ function pageFromPath() {
   if (path === "/projects/pinterest") return "pinterest";
   if (path === "/projects/cg") return "cg";
   if (path === "/projects/tinder") return "tinder";
+  if (path === "/projects/pact") return "pact";
   return "home";
 }
 
@@ -29,6 +31,7 @@ const titles = {
   pinterest: "Ad Creation Flow @ Pinterest — Uyen Phan",
   cg: "Community & Sustainability Building @ CG — Uyen Phan",
   tinder: "Profile Building @ Tinder — Uyen Phan",
+  pact: "Accountability with friends — Uyen Phan",
 };
 
 export default function App() {
@@ -44,6 +47,7 @@ export default function App() {
         <Nav
           current={page === "about" ? "About" : "Projects"}
           projectsHref={page === "home" ? "#projects" : "/"}
+          showBack={page !== "home" && page !== "about"}
         />
         {page === "about" ? (
           <About />
@@ -57,6 +61,8 @@ export default function App() {
           <CommunityGearbox />
         ) : page === "tinder" ? (
           <Tinder />
+        ) : page === "pact" ? (
+          <Pact />
         ) : (
           <>
             <Hero />

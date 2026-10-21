@@ -1,12 +1,8 @@
 import { useState } from "react";
 
-// Figma 40:350 — orange connect bar + flower strip. Full-bleed; inner
-// content matches the 1280px frame (180px side padding, 59px gap).
-const A = `${import.meta.env.BASE_URL}assets`;
-
 export default function Footer() {
   return (
-    <footer className="flex w-full flex-col items-center gap-[59px] bg-white">
+    <footer className="flex w-full flex-col items-center bg-white">
       <div className="flex w-full items-center bg-orange">
         <div className="mx-auto flex w-full max-w-[1280px] flex-col items-start px-6 py-16 lg:h-[338px] lg:px-[180px] lg:pb-[96px] lg:pt-[119px]">
           <div className="flex w-full flex-col items-start gap-10 lg:flex-row lg:items-center lg:justify-between lg:gap-0">
@@ -25,17 +21,6 @@ export default function Footer() {
             </div>
           </div>
         </div>
-      </div>
-
-      <div className="w-full max-w-[1280px] px-4 pb-0 lg:px-[76px]">
-        <img
-          src={`${A}/footer-flowers.svg`}
-          alt=""
-          aria-hidden
-          width="1127.51"
-          height="128.666"
-          className="mx-auto block h-auto w-full max-w-[1127.51px]"
-        />
       </div>
     </footer>
   );

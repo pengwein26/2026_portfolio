@@ -11,9 +11,8 @@ export const projects = [
   {
     id: "pact",
     title: "Accountability with friends",
-    description:
-      "Social accountability consumer app. Launched on app store & interviewed by Y-Combinator (YC) Spring 2024.",
-    href: "#",
+    description: "Startup. Social accountability consumer app. Launched on app store.",
+    href: "/projects/pact",
     thumb: "pact",
   },
   {

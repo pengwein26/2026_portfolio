@@ -1,5 +1,9 @@
 // Figma 73:334 / 12:28 — centered, 70px gap, 24px Instrument Sans, top 72px
-export default function Nav({ current = "Projects", projectsHref = "#projects" }) {
+export default function Nav({
+  current = "Projects",
+  projectsHref = "#projects",
+  showBack = false,
+}) {
   const links = [
     {
       label: "Projects",
@@ -10,7 +14,24 @@ export default function Nav({ current = "Projects", projectsHref = "#projects" }
   ];
 
   return (
-    <nav className="sticky top-0 z-50 flex justify-center gap-10 bg-white pb-4 pt-10 font-nav text-[20px] leading-[0.9] lg:gap-[70px] lg:pt-[72px] lg:text-[24px]">
+    <nav className="sticky top-0 z-50 flex justify-center gap-10 bg-white pb-4 pt-10 font-nav text-[20px] leading-[0.9] lg:gap-[70px] lg:pt-[72px] lg:text-[24px] relative">
+      {showBack ? (
+        <a
+          href="/"
+          aria-label="Back to projects"
+          className="absolute left-6 top-10 flex size-8 items-center justify-center rounded-sm text-ink hover:text-orange focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-orange lg:left-[180px] lg:top-[72px]"
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path
+              d="M15 5 8 12l7 7"
+              stroke="currentColor"
+              strokeWidth="1.8"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </a>
+      ) : null}
       {links.map((l) => (
         <a
           key={l.label}
