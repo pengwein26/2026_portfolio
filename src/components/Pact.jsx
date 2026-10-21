@@ -183,7 +183,7 @@ export default function Pact() {
           <div className="flex flex-col gap-8 text-meta sm:flex-row sm:flex-wrap sm:gap-x-[72px] lg:flex-nowrap lg:gap-x-[104px]">
             <Meta label="ROLE" value="Co-Founder, Product Designer" />
             <Meta label="TEAM" value="Christopher Bannon, Kavin Kumaravel" wide />
-            <Meta label="TIMELINE" value="2025" />
+            <Meta label="TIMELINE" value="2025-present" />
           </div>
           <div className="flex flex-col items-start justify-between gap-10 lg:flex-row">
             <PactCards />

@@ -10,7 +10,7 @@ const favorites = [
     rotate: "-15.02deg",
     // Inner image size, then rotated wrapper from Figma 40:376
     img: "h-[116px] w-[157.995px]",
-    wrap: "h-[152.991px] w-[182.664px] lg:left-[300px] lg:top-[193.5px]",
+    wrap: "h-[152.991px] w-[182.664px] lg:left-[300px] lg:top-[241.5px]",
     why: "I used to be a barista in San Francisco, and it did not help with my caffeine addiction...",
   },
   {
@@ -18,7 +18,7 @@ const favorites = [
     alt: "Mangosteen",
     rotate: "10.2deg",
     img: "h-[103.482px] w-[93.233px]",
-    wrap: "h-[118.359px] w-[110.088px] lg:left-[542.33px] lg:top-[188px]",
+    wrap: "h-[118.359px] w-[110.088px] lg:left-[542.33px] lg:top-[236px]",
     why: "Mangosteens are my favorite fruit! A lot of my childhood in Vietnam involved slobbering down 10 of these in one sitting.",
   },
   {
@@ -26,7 +26,7 @@ const favorites = [
     alt: "Bouquet of tulips",
     rotate: "0deg",
     img: "h-[124.523px] w-[94px]",
-    wrap: "h-[124.523px] w-[94px] lg:left-[709.33px] lg:top-[222px]",
+    wrap: "h-[124.523px] w-[94px] lg:left-[709.33px] lg:top-[270px]",
     why: "I love tulips because, with patience (and time), they blossom so beautifully.",
   },
   {
@@ -34,7 +34,7 @@ const favorites = [
     alt: "Handheld camera gimbal",
     rotate: "12.45deg",
     img: "h-[181.805px] w-[66.813px]",
-    wrap: "h-[191.932px] w-[104.428px] lg:left-[876.33px] lg:top-[155px]",
+    wrap: "h-[191.932px] w-[104.428px] lg:left-[876.33px] lg:top-[203px]",
     why: "Whenever I need to romanticize my life, I pull out my camera and make silly little vlogs.",
   },
   {
@@ -42,7 +42,7 @@ const favorites = [
     alt: "Four-leaf clover",
     rotate: "0deg",
     img: "h-[121.171px] w-[92px]",
-    wrap: "h-[121.171px] w-[92px] lg:left-[432.33px] lg:top-[402px]",
+    wrap: "h-[121.171px] w-[92px] lg:left-[432.33px] lg:top-[450px]",
     why: "Lucky girl syndrome! We all need a little sprinkle of luck in our lives!",
   },
   {
@@ -50,7 +50,7 @@ const favorites = [
     alt: "Envelope with a heart drawing",
     rotate: "-11.2deg",
     img: "h-[110.216px] w-[91px]",
-    wrap: "h-[125.79px] w-[110.671px] lg:left-[597.33px] lg:top-[376px]",
+    wrap: "h-[125.79px] w-[110.671px] lg:left-[597.33px] lg:top-[424px]",
     why: "Letters are my favorite presents to receive for any occasion, and I love sending them, too!",
   },
   {
@@ -58,7 +58,7 @@ const favorites = [
     alt: "Pen with a pink cap",
     rotate: "152.35deg",
     img: "size-[132.946px]",
-    wrap: "size-[179.456px] lg:left-[713.92px] lg:top-[389.58px]",
+    wrap: "size-[179.456px] lg:left-[713.92px] lg:top-[437.58px]",
     why: "I've been trying to do live cartoon drawings at events! I hope to do more of them this year.",
   },
 ];
@@ -66,7 +66,7 @@ const favorites = [
 export default function About() {
   return (
     <>
-      <section className="relative px-6 pb-8 pt-12 lg:px-12 lg:pb-4 lg:pt-[130px]">
+      <section className="relative px-6 pb-[120px] pt-12 lg:px-12 lg:pb-[120px] lg:pt-[130px]">
         <div className="mx-auto flex max-w-[887px] flex-col items-center gap-10 lg:flex-row lg:items-center lg:gap-[100px]">
           {/* Portrait — 13:152, 222×302 with Figma crop offsets */}
           <div className="relative h-[260px] w-[191px] shrink-0 overflow-hidden lg:h-[302px] lg:w-[222.268px]">
@@ -119,8 +119,8 @@ export default function About() {
       </section>
 
       {/* Favorite things — Figma 40:392 */}
-      <section className="relative mx-auto max-w-[1280px] overflow-visible px-6 pb-8 lg:h-[643px] lg:px-0">
-        <div className="mx-auto flex max-w-[565px] flex-col items-start gap-[9px] pt-[72px] lg:absolute lg:left-[202px] lg:top-[30px] lg:mx-0 lg:w-[565px]">
+      <section className="relative mx-auto max-w-[1280px] overflow-visible px-6 pb-8 lg:h-[691px] lg:px-0">
+        <div className="mx-auto flex max-w-[565px] flex-col items-start gap-[9px] pt-[72px] pb-[48px] lg:absolute lg:left-[202px] lg:top-[30px] lg:mx-0 lg:w-[565px]">
           <p className="font-body text-[16px] leading-none text-muted lg:text-[20px]">
             Hover to find out why
           </p>

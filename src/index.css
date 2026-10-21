@@ -64,6 +64,23 @@ html,
   animation: nav-wiggle 0.55s linear infinite alternate;
 }
 
+@keyframes scribble-draw {
+  0% { stroke-dashoffset: 1; }
+  35% { stroke-dashoffset: 0; }
+  80% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 1; }
+}
+
+.hero-scribble path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: scribble-draw 2.4s ease-in-out infinite;
+}
+
+.hero-scribble path:nth-child(2) {
+  animation-delay: 0.18s;
+}
+
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; }
 }
