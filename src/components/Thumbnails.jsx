@@ -79,12 +79,17 @@ export const thumbnails = {
     </Frame>
   ),
 
-  // 73:402
+  // 16:5409
   jwDirectory: () => (
     <Frame bg="#e3eaf6">
+      <Img
+        src="jw-directory-bg.png"
+        className="left-0 w-full object-cover"
+        style={{ top: "-8.11cqw", height: "66.67cqw" }}
+      />
       <div className="absolute inset-[0_16.03%_-0.24%_16.05%] overflow-clip">
-        <Phone src="jw-directory-2.png" left="calc(50% + 12.48cqw)" w="22.2cqw" h="45.28cqw" r="3.91cqw" crop={{ h: "103.4%", l: "-4.9%", t: "-1.86%", w: "107.77%" }} />
-        <Phone src="jw-directory-1.png" left="calc(50% - 12.45cqw)" w="22.27cqw" h="45.68cqw" r="3.37cqw" crop={{ h: "103.29%", l: "-4.78%", t: "-1.73%", w: "108.29%" }} />
+        <Phone src="jw-directory-2.gif" left="calc(50% + 12.48cqw)" w="22.2cqw" h="45.28cqw" r="3.91cqw" crop={{ h: "103.4%", l: "-4.9%", t: "-1.86%", w: "107.77%" }} />
+        <Phone src="jw-directory-1.gif" left="calc(50% - 12.45cqw)" w="22.27cqw" h="45.68cqw" r="3.37cqw" crop={{ h: "103.29%", l: "-4.78%", t: "-1.73%", w: "108.29%" }} />
       </div>
     </Frame>
   ),
@@ -98,22 +103,36 @@ export const thumbnails = {
     </Frame>
   ),
 
-  // 73:418
+  // 16:5425
   cg: () => (
     <Frame bg="#dbe5c2">
-      <div className="absolute inset-[0_11.92%_-12.29%_11.99%] overflow-clip">
-        <div
-          className="absolute drop-shadow-[0_1.5px_0.76px_rgba(0,0,0,0.25)]"
-          style={{ left: "13.73cqw", top: "4.55cqw", width: "21.47cqw", height: "44.88cqw" }}
-        >
-          <Img src="cg-home.png" className="inset-0 size-full object-cover shadow-[0_1.5px_1.5px_0_rgba(0,0,0,0.25)]" style={{ borderRadius: "3.63cqw" }} />
-        </div>
-        <Img
-          src="cg-leaderboard.png"
-          className="object-cover shadow-[0_1.5px_1.5px_0_rgba(0,0,0,0.25)]"
-          style={{ left: "40.92cqw", top: "4.49cqw", width: "21.49cqw", height: "44.92cqw", borderRadius: "3.64cqw" }}
-        />
-      </div>
+      <Img
+        src="cg-card-bg.png"
+        className="object-cover"
+        style={{ left: "-0.53%", top: "-93.83cqw", width: "100.53%", height: "177.8cqw" }}
+      />
+      <Img
+        src="cg-home.gif"
+        className="object-cover shadow-[0_1.67px_1.67px_0_rgba(0,0,0,0.25)]"
+        style={{
+          left: "23.24cqw",
+          top: "7.84cqw",
+          width: "23.63cqw",
+          height: "49.39cqw",
+          borderRadius: "2.47cqw",
+        }}
+      />
+      <Img
+        src="cg-leaderboard.gif"
+        className="object-cover shadow-[0_1.67px_1.67px_0_rgba(0,0,0,0.25)]"
+        style={{
+          left: "53.17cqw",
+          top: "7.76cqw",
+          width: "23.66cqw",
+          height: "49.44cqw",
+          borderRadius: "2.47cqw",
+        }}
+      />
     </Frame>
   ),
 };

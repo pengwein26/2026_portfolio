@@ -41,7 +41,7 @@ export const projects = [
   },
   {
     id: "cg",
-    title: "Community & Sustainability Building @ CG",
+    title: "Community & Sustainability Building",
     description:
       "Worked with an early startup, Design mobile features to increase accountability and foster community engagement.",
     href: "/projects/cg",
